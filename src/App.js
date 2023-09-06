@@ -60,23 +60,9 @@ export default function App() {
         />
 
         <ParallaxLayer
-          offset={0.1}
-          speed={2}
-          onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "left",
-            marginLeft: "50%",
-          }}
-        >
-          <AlbumCover classname="" />
-        </ParallaxLayer>
-
-        <ParallaxLayer
           offset={0}
           speed={4}
-          onClick={() => parallax.current.scrollTo(1)}
+          // onClick={() => parallax.current.scrollTo(1)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -94,7 +80,7 @@ export default function App() {
         <ParallaxLayer
           offset={0.2}
           speed={6}
-          onClick={() => parallax.current.scrollTo(1)}
+          // onClick={() => parallax.current.scrollTo(1)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -112,7 +98,7 @@ export default function App() {
         <ParallaxLayer
           offset={0.2}
           speed={5}
-          onClick={() => parallax.current.scrollTo(1)}
+          // onClick={() => parallax.current.scrollTo(1)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -128,9 +114,22 @@ export default function App() {
         </ParallaxLayer>
 
         <ParallaxLayer
+          offset={0.1}
+          speed={2}
+          // onClick={() => parallax.current.scrollTo(1)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "left",
+            marginLeft: "70%",
+          }}
+        >
+          <AlbumCover classname="posielate" />
+        </ParallaxLayer>
+        <ParallaxLayer
           offset={1}
           speed={0.1}
-          onClick={() => parallax.current.scrollTo(2)}
+          // onClick={() => parallax.current.scrollTo(2)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -148,7 +147,7 @@ export default function App() {
             alignItems: "center",
             justifyContent: "center",
           }}
-          onClick={() => parallax.current.scrollTo(0)}
+          // onClick={() => parallax.current.scrollTo(0)}
         >
           <img src={url("clients-main")} style={{ width: "40%" }} />
         </ParallaxLayer>
