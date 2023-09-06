@@ -36,8 +36,10 @@
     transform-origin: 2vw 3vh;
     box-shadow: 100vmin 0 12.891529105066354vmin currentColor;
 }
+
+/* #f7f5ea */
 .background span:nth-child(1) {
-    color: #f7f5ea;
+    color: darkblue;
     top: 34%;
     left: 35%;
     animation-duration: 106s;
@@ -46,7 +48,7 @@
     box-shadow: -100vmin 0 13.247346924339194vmin currentColor;
 }
 .background span:nth-child(2) {
-    color: #f7f5ea;
+    color: darkblue;
     top: 27%;
     left: 23%;
     animation-duration: 53s;
@@ -63,8 +65,9 @@
     transform-origin: 23vw 20vh;
     box-shadow: -100vmin 0 13.31948057123283vmin currentColor;
 }
+/* f9f9ea */
 .background span:nth-child(4) {
-    color: #f9f9ea;
+    color: blue;
     top: 29%;
     left: 49%;
     animation-duration: 366s;

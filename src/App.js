@@ -6,6 +6,7 @@ import spotifylogo from "./img/spotifylogogreensmall.png";
 import applelogo from "./img/applelogo.png";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import BackgroundAnimation from "./components/BackgroundAnimation";
+import AlbumCover from "./components/AlbumCover";
 
 //
 // colors used for background: #FAF9F6 ("pearl")
@@ -59,17 +60,17 @@ export default function App() {
         />
 
         <ParallaxLayer
-          offset={0}
+          offset={0.1}
           speed={2}
           onClick={() => parallax.current.scrollTo(1)}
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            marginLeft: "25%",
+            justifyContent: "left",
+            marginLeft: "50%",
           }}
         >
-          <img src={albumcover} className="albumimage" />
+          <AlbumCover classname="" />
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -79,11 +80,12 @@ export default function App() {
           style={{
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
-            marginLeft: "-20%",
+            justifyContent: "left",
+            marginLeft: "10%",
+            width: "40%",
           }}
         >
-          <div className="container w-50 p-2">
+          <div className="container p-2">
             <h1 className="display-6">let me bend it for you</h1>
             <p>a brand-new EP full of genre-bending spanish guitar music</p>
           </div>
