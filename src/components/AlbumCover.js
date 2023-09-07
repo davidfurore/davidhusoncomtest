@@ -6,13 +6,8 @@ import { a } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 
 const AlbumCover = () => {
-  const [flipped, set] = useState(false);
-
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(90px) rotateX(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  });
+  const [flipped, setFade] = useState(false);
+  const [hover, setHover] = useState(false);
 
   const fade = useSpring({
     from: { opacity: 0 },
@@ -20,14 +15,19 @@ const AlbumCover = () => {
     config: { duration: 1000 },
   });
 
+  const bounce = useSpring({
+    from: {},
+    to: {},
+    config: {},
+  });
+
   const cardStyles = {
     position: "absolute",
-    // maxWidth: "500px",
-    // maxHeight: "500px",
-    width: "40%",
-    height: "40%",
+    maxWidth: "300px",
+    maxHeight: "300px",
+    width: "100%",
+    height: "100%",
     cursor: "pointer",
-
     willChange: "transform, opacity",
   };
 
@@ -52,22 +52,22 @@ const AlbumCover = () => {
   };
 
   return (
-    <div
-      style={Object.assign({}, containerStyles)}
-      onClick={() => set((state) => !state)}
-    >
-      <a.div
-        style={Object.assign({}, cardStyles, frontBackStyles, backStyles, {
-          opacity: opacity.to((o) => 1 - o),
-          transform,
-        })}
-      />
-      <a.div
-        style={Object.assign({}, cardStyles, frontBackStyles, frontStyles, {
-          opacity,
-          transform,
-        })}
-      />
+    <div className="container vibe">
+      <animated.div
+        style={{
+          ...fade,
+          maxWidth: "500px",
+          maxWidth: "400px",
+          marginRight: "50%",
+          //   backgroundColor: "red",
+          //   borderRadius: "50%",
+        }}
+        onClick={() => setFade((state) => !state)}
+      >
+        <div className="position-relative">
+          <img src={albumcover} className="albumimage" />
+        </div>
+      </animated.div>
     </div>
   );
 

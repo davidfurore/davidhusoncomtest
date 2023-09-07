@@ -121,10 +121,10 @@ export default function App() {
             display: "flex",
             alignItems: "center",
             justifyContent: "left",
-            marginLeft: "70%",
+            marginLeft: "50%",
           }}
         >
-          <AlbumCover classname="posielate" />
+          <AlbumCover />
         </ParallaxLayer>
         <ParallaxLayer
           offset={1}
