@@ -1,21 +1,34 @@
-import React, { useState } from "react";
-
+import React, { useEffect, useState } from "react";
+import "./albumcover.css";
 import albumcover from "../img/albumcover.jpg";
 import albumback from "../img/albumback.jpg";
-import { a } from "@react-spring/web";
+import { a, useSpringRef } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 
 const AlbumCover = () => {
-  const [flipped, setFade] = useState(false);
+  const [flipped, setFlipped] = useState(false);
   const [hover, setHover] = useState(false);
+  const [imageState, setImageState] = useState(true);
+
+  const handleClick = () => {
+    setImageState((prevState) => {
+      return !prevState;
+    });
+  };
+  const fadeRef = useSpringRef();
+
+  useEffect(() => {
+    fadeRef.start();
+  }, [imageState]);
 
   const fade = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 1000 },
+    config: { duration: 1200 },
   });
 
   const bounce = useSpring({
+    ref: fadeRef,
     from: {},
     to: {},
     config: {},
@@ -62,10 +75,14 @@ const AlbumCover = () => {
           //   backgroundColor: "red",
           //   borderRadius: "50%",
         }}
-        onClick={() => setFade((state) => !state)}
+        onClick={() => setFlipped((state) => !state)}
       >
         <div className="position-relative">
-          <img src={albumcover} className="albumimage" />
+          <img
+            src={imageState ? albumcover : albumback}
+            className="albumimage grow2"
+            onClick={handleClick}
+          />
         </div>
       </animated.div>
     </div>

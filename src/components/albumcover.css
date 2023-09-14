@@ -1,0 +1,12 @@
+
+.grow2{
+    transition: 1s ease;
+    }
+
+.grow2:hover{
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.5s ease;
+    
+}

@@ -35,3 +35,27 @@
 .logoimage{
   width: 10%
 }
+
+
+/* image grid */
+.rounded.float-start.img-thumbnail {
+  border-radius: 1% !important;
+  border: 0px !important;
+  background: transparent;
+}
+
+
+
+
+.grow{
+  transition: 1s ease;
+  }
+  
+.rounded.float-start.img-thumbnail.grow:hover{
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: 0.5s ease;
+  
+  }
+  
