@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "./App.css";
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import albumcover from "./img/albumcover.jpg";
 import spotifylogo from "./img/spotifylogogreensmall.png";
 import applelogo from "./img/applelogo.png";
@@ -35,8 +36,10 @@ export default function App() {
         className="
      parentcontainer"
       >
-        <div class="container-fluid m-3">
-          <h5> David Huson</h5>
+        <div className="snapstart">
+          <h5 className="content-header m-3" id="about">
+            David Huson
+          </h5>
         </div>
 
         <main>
@@ -57,15 +60,55 @@ export default function App() {
               </div>
             </div>
           </div>
-          <div className="content">
-            <h1 className="content-header" id="portfolio">
-              portfolio
-            </h1>
+          <div className="content snapstart">
+            <h5 className="content-header m-3" id="portfolio">
+              Portfolio
+            </h5>
+            <div className="container">
+              <ProjectsGallery />
+
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        Modal title
+                      </h1>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">...</div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-bs-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      <button type="button" class="btn btn-primary">
+                        Save changes
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>{" "}
-          <div className="content">
-            <h1 className="content-header" id="about">
-              about
-            </h1>
+          <div className="content snapstart">
+            <h5 className="content-header m-3" id="about">
+              About
+            </h5>
           </div>
         </main>
         <BackgroundAnimation />

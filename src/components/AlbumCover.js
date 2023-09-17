@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./albumcover.css";
-import albumcover from "../img/albumcover.jpg";
-import albumback from "../img/albumback.jpg";
+import albumfront from "../img/frontcover_small.jpg";
+import albumback from "../img/backcover_small.jpg";
 import { a, useSpringRef } from "@react-spring/web";
 import { useSpring, animated } from "@react-spring/web";
 
@@ -53,7 +53,7 @@ const AlbumCover = () => {
   };
 
   const frontStyles = {
-    backgroundImage: `url(${albumcover})`,
+    backgroundImage: `url(${albumfront})`,
     transform: "rotateX(180deg)",
   };
 
@@ -79,7 +79,7 @@ const AlbumCover = () => {
       >
         <div className="position-relative mb-5">
           <img
-            src={imageState ? albumcover : albumback}
+            src={imageState ? albumfront : albumback}
             className="albumimage grow2 border"
             onClick={handleClick}
           />

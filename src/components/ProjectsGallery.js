@@ -1,22 +1,32 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import albumcover from "../img/albumcover.jpg";
-import comoelvientocover from "../img/comoelviento.jpg";
+import ComoElViento from "./gallerycomponents/ComoElViento";
 
 export default function ProjectsGallery() {
   return (
     <>
-      <div class="card" style={{ width: "18 rem" }}>
-        <img src={albumcover} class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary">
-            Go somewhere
-          </a>
+      {/* //modals */}
+
+      <div className="container">
+        <div className="row m-5">
+          <div className="col-sm">
+            <ComoElViento />
+          </div>
+          <div className="col-sm">
+            <img
+              src={albumcover}
+              className="rounded float-start img-thumbnail grow"
+              alt="..."
+            />
+          </div>
+          <div className="col-sm">
+            <img
+              src={albumcover}
+              className="rounded float-start img-thumbnail grow"
+              alt="..."
+            />
+          </div>
         </div>
       </div>
     </>
