@@ -24,7 +24,7 @@ const AlbumCover = () => {
   const fade = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 1200 },
+    config: { duration: 1500 },
   });
 
   const bounce = useSpring({
@@ -65,22 +65,22 @@ const AlbumCover = () => {
   };
 
   return (
-    <div className="container vibe">
+    <div className="container">
       <animated.div
         style={{
           ...fade,
-          maxWidth: "500px",
-          maxWidth: "400px",
-          marginRight: "50%",
+          // maxWidth: "500px",
+          // maxWidth: "400px",
+          // marginRight: "50%",
           //   backgroundColor: "red",
           //   borderRadius: "50%",
         }}
         onClick={() => setFlipped((state) => !state)}
       >
-        <div className="position-relative">
+        <div className="position-relative mb-5">
           <img
             src={imageState ? albumcover : albumback}
-            className="albumimage grow2"
+            className="albumimage grow2 border"
             onClick={handleClick}
           />
         </div>

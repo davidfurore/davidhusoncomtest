@@ -12,6 +12,7 @@
     left: 0;
     background: #FAF9F6;
     overflow: hidden;
+    z-index: -1;
 }
 
 .background span {
