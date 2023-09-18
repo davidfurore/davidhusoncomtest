@@ -22,6 +22,8 @@ import {
   scrollSpy,
   scroller,
 } from "react-scroll";
+import "animate.css";
+import "./fonts/fonts.css";
 
 //
 // colors used for background: #FAF9F6 ("pearl")
@@ -36,10 +38,10 @@ export default function App() {
         className="
      parentcontainer"
       >
-        <div className="snapstart">
-          <h5 className="content-header m-3" id="about">
+        <div className="snapstart animate__animated animate__fadeIn">
+          <h4 className="content-header m-3 p-3" id="about">
             David Huson
-          </h5>
+          </h4>
         </div>
 
         <main>
@@ -48,10 +50,10 @@ export default function App() {
               home
             </h1> */}
             <div class="row mx-auto text-center">
-              <div class="col-12 col-md-6  ">
+              <div class="col-12 col-md-6 ">
                 <AlbumCover />
               </div>
-              <div class="col-12 col-md-6">
+              <div class="col-12 col-md-6 animate__animated animate__fadeIn">
                 <h1 className="display-6">let me bend it for you</h1>
                 <p>a brand-new EP full of genre-bending spanish guitar music</p>
                 <div class="container">
@@ -61,54 +63,17 @@ export default function App() {
             </div>
           </div>
           <div className="content snapstart">
-            <h5 className="content-header m-3" id="portfolio">
+            <h4 className="content-header m-3 p-3" id="portfolio">
               Portfolio
-            </h5>
+            </h4>
             <div className="container">
               <ProjectsGallery />
-
-              <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-              >
-                <div class="modal-dialog">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h1 class="modal-title fs-5" id="exampleModalLabel">
-                        Modal title
-                      </h1>
-                      <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div class="modal-body">...</div>
-                    <div class="modal-footer">
-                      <button
-                        type="button"
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                      >
-                        Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>{" "}
           <div className="content snapstart">
-            <h5 className="content-header m-3" id="about">
+            <h4 className="content-header m-3 p-3" id="about">
               About
-            </h5>
+            </h4>
           </div>
         </main>
         <BackgroundAnimation />

@@ -2,9 +2,6 @@
   text-align: center;
 } */
 
-/* 
-
-//// */
 
 .parentcontainer{
   position:relative;
@@ -85,4 +82,7 @@
   transition: 0.3s ease;
   
   }
-  
+  .animate__animated.animate__fadeIn {
+    --animate-duration: 2s;
+  }
+

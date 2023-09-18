@@ -1,0 +1,23 @@
+@font-face {
+    font-family: HeaderFont;
+    src: url("./rastaglion.ttf");
+  }
+
+  @font-face {
+    font-family: UnnaFont;
+    src: url("./Unna-Regular.ttf");
+  }
+
+
+  @font-face {
+    font-family: GildaFont;
+    src: url("./GildaDisplay-Regular.ttf");
+  }
+
+  .content-header{
+    font-family: HeaderFont;
+  }
+
+  .display-6 {
+    font-family: GildaFont;
+  }
