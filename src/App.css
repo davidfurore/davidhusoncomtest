@@ -15,11 +15,19 @@
   -webkit-scrollbar{display:none;}
 }
 
+/* .radialcontainer::before{
+  background: radial-gradient(
+    at var(--mouse-x, 0%) var(--mouse-y, 0%),
+    rgb(225, 0, 255),
+    rgba(0, 0, 0, 0.5)
+  );
+} */
+
 .content{
   /* /* display: flex;
   align-items: center;
   justify-content: center; */
-  height: 100vh; 
+  height: 80vh; 
   /* scroll-snap-align: start; */
 }
 
@@ -86,3 +94,63 @@
     --animate-duration: 2s;
   }
 
+
+
+/* 
+  background grainy animated */
+  /* resulting css */
+
+  
+
+  
+  .homebackground{
+    filter: contrast(110%) brightness(100%);
+    background: linear-gradient(
+        to bottom right,
+        /* #FFF8EA, */
+        #f5f4f3,
+        #ffc95e0e
+      ),
+      radial-gradient(
+        at var(--mouse-x, 0%) var(--mouse-y, 0%),
+        rgba(255, 255, 255, 0.457),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    height: 100vh;
+  }
+
+  
+  .portfoliobackground {
+    filter: contrast(130%) brightness(100%);
+    background: linear-gradient(
+        to top right,
+        /* #212168c6, */
+        #175876,
+        #ffc95e23
+      ),
+      radial-gradient(
+        at var(--mouse-x, 0%) var(--mouse-y, 0%),
+        rgba(255, 255, 255, 0.457),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 45 45' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    height: 100vh;
+  }
+
+  .aboutbackground{
+    filter: contrast(130%) brightness(100%);
+    background: linear-gradient(
+        to top left,
+        rgba(21, 180, 229, 0.674),
+        #d4b26eab
+      ),
+      radial-gradient(
+        at var(--mouse-x, 0%) var(--mouse-y, 0%),
+        rgba(255, 255, 255, 0.457),
+        rgba(0, 0, 0, 0.587)
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 70 70' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='4' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    height: 100vh;
+  }
+  

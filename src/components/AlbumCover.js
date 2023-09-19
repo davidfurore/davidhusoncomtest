@@ -80,7 +80,7 @@ const AlbumCover = () => {
         <div className="position-relative mb-5">
           <img
             src={imageState ? albumfront : albumback}
-            className="albumimage grow2 border"
+            className="albumimage grow2 rounded"
             onClick={handleClick}
           />
         </div>
