@@ -1,7 +1,8 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
-import albumcover from "../img/albumcover.jpg";
 import ComoElViento from "./gallerycomponents/ComoElViento";
+import SoleaFilm from "./gallerycomponents/SoleaFilm";
+import OmarmFilm from "./gallerycomponents/OmarmFilm";
 
 export default function ProjectsGallery() {
   return (
@@ -11,21 +12,13 @@ export default function ProjectsGallery() {
       <div className="container">
         <div className="row m-5">
           <div className="col-sm">
+            <SoleaFilm />
+          </div>
+          <div className="col-sm">
             <ComoElViento />
           </div>
           <div className="col-sm">
-            <img
-              src={albumcover}
-              className="rounded float-start img-thumbnail grow"
-              alt="..."
-            />
-          </div>
-          <div className="col-sm">
-            <img
-              src={albumcover}
-              className="rounded float-start img-thumbnail grow"
-              alt="..."
-            />
+            <OmarmFilm />
           </div>
         </div>
       </div>

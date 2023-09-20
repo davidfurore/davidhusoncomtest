@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Modal, Button } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import comoelvientocover from "../../img/comoelviento.jpg";
 import "./comoelviento.css";
 
@@ -52,10 +52,10 @@ export default function ComoElViento() {
       >
         <Modal.Header className="border-0" closeButton></Modal.Header>
         <Modal.Body>
-          <div className="container h-100">
-            <div className="row justify-content-center h-100">
-              <div className="col-12 col-md-6 text-start px-3">
-                <h5>
+          <div className="container ">
+            <div className="row justify-content-center m-auto ">
+              <div className="col-12 col-md-6 text-start">
+                <h5 className="display-6">
                   <b>Como El Viento</b>
                 </h5>
                 <p>
@@ -136,7 +136,7 @@ export default function ComoElViento() {
                 </p>
               </div>
 
-              <div className="col-12 col-md-6 text-center px-3">
+              <div className="col-12 col-md-6 text-center  ">
                 <iframe
                   style={{ border: "0", width: "300px", height: "300px" }}
                   src="https://bandcamp.com/EmbeddedPlayer/album=399467419/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"

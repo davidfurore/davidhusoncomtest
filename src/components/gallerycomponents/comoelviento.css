@@ -1,6 +1,7 @@
 .modal {
     --bs-modal-width: 100%;
-    background-color: #fafaf2;
+    background-color: #fafaf2bd;
+    
   }
 
 
@@ -26,15 +27,27 @@
 
 /* Remove border from modal content */
 .modal-content {
+  
   border: none;
 }
 
 
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
 
-.modal-content {
-    background-image: url("../../img/clouds.jpg");
-  background-size:cover;
+.modal-content{
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
+  ,  linear-gradient(
+        to top right,
+        /* #212168c6, */
+        #f7f6f2,
+        #f3ead1
+      );
+}
+
+/* .modal-content {
+    background-image: url("../../img/asfalt.png") ;
+       background-size:contain;
+
         -webkit-animation: slidein 120s;
         animation: slidein 120s;
 
@@ -46,7 +59,7 @@
 
         -webkit-animation-direction: alternate;
         animation-direction: alternate;              
-}
+} */
 
 @-webkit-keyframes slidein {
 from {background-position: top; background-size:3000px; }
