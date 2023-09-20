@@ -1,0 +1,10 @@
+.carousel-item img {
+    max-height: 70vh;
+    max-width: 70vw
+  }
+  
+  ul{
+    list-style-type: none; /* Remove bullets */
+    font-size: smaller;
+ 
+  }

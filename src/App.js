@@ -1,157 +1,118 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import "./App.css";
+import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 import albumcover from "./img/albumcover.jpg";
 import spotifylogo from "./img/spotifylogogreensmall.png";
 import applelogo from "./img/applelogo.png";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 import AlbumCover from "./components/AlbumCover";
+import ProjectsGallery from "./components/ProjectsGallery";
+import About from "./components/About";
+import comoelvientocover from "./img/comoelviento.jpg";
+import Modal from "react-bootstrap/Modal";
+import SpotifyApple from "./components/SpotifyApple";
+import Button from "react-bootstrap/Button";
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller,
+} from "react-scroll";
+import "animate.css";
+import "./fonts/fonts.css";
 
 //
 // colors used for background: #FAF9F6 ("pearl")
 // for layer 1: #F9F6EE ("bone")
 // for laye 2: #FAF9F6 ("offwhite")
 // Little helpers ...
-const url = (name, wrap = false) =>
-  `${
-    wrap ? "url(" : ""
-  }https://awv3node-homepage.surge.sh/build/assets/${name}.svg${
-    wrap ? ")" : ""
-  }`;
 
 export default function App() {
-  const parallax = useRef(null);
+  const homeRef = useRef(null);
+  const portfolioRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  useEffect(() => {
+    const moveGradient = (event) => {
+      const winWidth = window.innerWidth;
+      const winHeight = window.innerHeight;
+      const mouseX = Math.round((event.pageX / winWidth) * 100);
+      const mouseY = Math.round((event.pageY / winHeight) * 100);
+
+      if (homeRef) {
+        homeRef.current.style.setProperty("--mouse-x", mouseX.toString() + "%");
+        homeRef.current.style.setProperty("--mouse-y", mouseY.toString() + "%");
+      }
+    };
+
+    document.addEventListener("mousemove", moveGradient);
+
+    return function cleanup() {
+      document.removeEventListener("mousemove", moveGradient);
+    };
+  }, [homeRef, portfolioRef, aboutRef]);
+
   return (
-    <div className="parallaxcontainer">
-      <BackgroundAnimation />
-      <Parallax
-        style={{ background: "#00ff0000", opacity: "1" }}
-        ref={parallax}
-        pages={3}
+    <>
+      <div
+        className="
+     parentcontainer 
+     "
       >
-        <ParallaxLayer offset={1} speed={1} className="layer1" />
-        <ParallaxLayer offset={2} speed={1} className="layer2" />
-
-        <ParallaxLayer
-          offset={0}
-          speed={0.3}
-          sticky={{ start: 0, end: 3 }}
-          style={{
-            display: "flex",
-            alignItems: "top",
-            justifyContent: "left",
-            pointerEvents: "none",
-          }}
-        >
-          <div className="container pt-2">
-            <p>David Huson</p>
+        <main ref={homeRef}>
+          <div className="content snapstart animate__animated animate__fadeIn homebackground">
+            <h4 className="content-header p-4" id="home">
+              David Huson
+            </h4>
+            <div className="container">
+              <div className="container content d-flex align-items-center justify-content-center">
+                <div class="row mx-auto text-center">
+                  <div class="col-12 col-md-6 ">
+                    <AlbumCover />
+                  </div>
+                  <div class="col-12 col-md-6 animate__animated animate__fadeIn">
+                    <h1 className="display-6">let me bend it for you</h1>
+                    <p>
+                      a brand-new EP full of genre-bending spanish guitar music
+                    </p>
+                    <div class="container">
+                      <SpotifyApple />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        />
-
-        <ParallaxLayer
-          offset={0}
-          speed={4}
-          // onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "left",
-            marginLeft: "10%",
-            width: "40%",
-          }}
-        >
-          <div className="container p-2">
-            <h1 className="display-6">let me bend it for you</h1>
-            <p>a brand-new EP full of genre-bending spanish guitar music</p>
+          <div
+            className="content snapstart portfoliobackground"
+            ref={portfolioRef}
+          >
+            <h4 className="content-header p-4 text-white" id="portfolio">
+              Portfolio
+            </h4>
+            <div className="container">
+              <ProjectsGallery />
+            </div>
           </div>
-        </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={0.2}
-          speed={6}
-          // onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginLeft: "8%",
-          }}
-        >
-          <div className="container">
-            <a href="spotify">
-              <img src={spotifylogo} className="logoimage" />
-            </a>
+          <div className="content snapstart aboutbackground" ref={aboutRef}>
+            <h4 className="content-header p-4" id="about">
+              About
+            </h4>
+            <div className="container content d-flex align-items-center justify-content-center">
+              <About />
+            </div>
           </div>
-        </ParallaxLayer>
+        </main>
 
-        <ParallaxLayer
-          offset={0.2}
-          speed={5}
-          // onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            marginLeft: "20%",
-          }}
-        >
-          <div className="container">
-            <a href="apple">
-              <img src={applelogo} className="logoimage " />
-            </a>
-          </div>
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={0.1}
-          speed={2}
-          // onClick={() => parallax.current.scrollTo(1)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "left",
-            marginLeft: "50%",
-          }}
-        >
-          <AlbumCover />
-        </ParallaxLayer>
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          // onClick={() => parallax.current.scrollTo(2)}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-        >
-          <img src={url("bash")} style={{ width: "40%" }} />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={2}
-          speed={-0}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-          }}
-          // onClick={() => parallax.current.scrollTo(0)}
-        >
-          <img src={url("clients-main")} style={{ width: "40%" }} />
-        </ParallaxLayer>
-      </Parallax>
-    </div>
+        <BackgroundAnimation />
+      </div>
+    </>
   );
 }
