@@ -1,7 +1,10 @@
 /* .App {
   text-align: center;
 } */
-
+#grained:before{
+  pointer-events: none;
+  z-index: 100000; /*lol*/
+}
 
 .parentcontainer{
   position:relative;
