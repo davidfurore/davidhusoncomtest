@@ -3,6 +3,10 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { Carousel } from "react-bootstrap";
 import omarmcover from "../../img/omarmcover.webp";
+import still1 from "../../img/stills/omarm_still1.webp";
+import still2 from "../../img/stills/omarm_still2.webp";
+import still3 from "../../img/stills/omarm_still3.webp";
+
 import "./soleafilm.css";
 
 export default function OmarmFilm() {
@@ -79,18 +83,14 @@ export default function OmarmFilm() {
                 <div className="container">
                   <Carousel>
                     <Carousel.Item>
-                      <img
-                        src={omarmcover}
-                        text="First slide"
-                        alt="omarm cover"
-                      />
+                      <img src={still1} text="First slide" alt="omarm cover" />
                     </Carousel.Item>
-                    {/* <Carousel.Item>
+                    <Carousel.Item>
                       <img src={still2} text="Second slide" />
                     </Carousel.Item>
                     <Carousel.Item>
                       <img src={still3} text="Third slide" />
-                    </Carousel.Item> */}
+                    </Carousel.Item>
                   </Carousel>
                 </div>
                 {/* <img className="img-fluid" src={comoelvientocover}></img> */}
