@@ -71,7 +71,7 @@ export default function App() {
         grainDensity: 1,
         grainWidth: 1,
         grainHeight: 1,
-        grainChaos: 0.7,
+        grainChaos: 0.5,
         grainSpeed: 20,
       };
 
@@ -202,8 +202,8 @@ export default function App() {
     animate: true,
     patternWidth: 100,
     patternHeight: 100,
-    grainOpacity: 0.1,
-    grainDensity: 1.1,
+    grainOpacity: 0.14,
+    grainDensity: 2,
     grainWidth: 1,
     grainHeight: 1,
     grainChaos: 0.5,
