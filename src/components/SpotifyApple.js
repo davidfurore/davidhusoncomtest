@@ -13,7 +13,10 @@ export default function SpotifyApple() {
           </a>
         </div>
         <div className="col">
-          <a href="" target="_blank">
+          <a
+            href="https://open.spotify.com/album/3Vs1DcVKH9kGMKktfuqY7E?si=P1JVbmhxSM6wlE6hckK7nQ"
+            target="_blank"
+          >
             <img className="img-fluid w-75 zoom-in" src={spotifylogo} />
           </a>
         </div>
