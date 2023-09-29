@@ -8,12 +8,18 @@ export default function SpotifyApple() {
     <>
       <div className="row my-5 px-5">
         <div className="col">
-          <a href="" target="_blank">
+          <a
+            href="https://music.apple.com/nl/album/let-me-bend-it-for-you-ep/1705138058"
+            target="_blank"
+          >
             <img className="img-fluid w-75 zoom-in" src={applelogo} />
           </a>
         </div>
         <div className="col">
-          <a href="" target="_blank">
+          <a
+            href="https://open.spotify.com/album/3Vs1DcVKH9kGMKktfuqY7E?si=P1JVbmhxSM6wlE6hckK7nQ"
+            target="_blank"
+          >
             <img className="img-fluid w-75 zoom-in" src={spotifylogo} />
           </a>
         </div>

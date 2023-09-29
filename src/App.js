@@ -200,9 +200,9 @@ export default function App() {
 
   var options = {
     animate: true,
-    patternWidth: 100,
-    patternHeight: 100,
-    grainOpacity: 0.14,
+    patternWidth: 300,
+    patternHeight: 300,
+    grainOpacity: 0.089,
     grainDensity: 2,
     grainWidth: 1,
     grainHeight: 1,

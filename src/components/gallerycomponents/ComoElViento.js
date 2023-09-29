@@ -138,7 +138,7 @@ export default function ComoElViento() {
 
               <div className="col-12 col-md-6 text-center  ">
                 <iframe
-                  style={{ border: "0", width: "300px", height: "300px" }}
+                  style={{ border: "0", width: "200px", height: "200px" }}
                   src="https://bandcamp.com/EmbeddedPlayer/album=399467419/size=large/bgcol=ffffff/linkcol=0687f5/minimal=true/transparent=true/"
                   seamless
                 >
