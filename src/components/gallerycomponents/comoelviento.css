@@ -1,6 +1,6 @@
 .modal {
     --bs-modal-width: 100%;
-    background-color: #fafaf2bd;
+    background-color: #10101059;
     
   }
 
@@ -12,6 +12,10 @@
  
   }
 
+  
+  .modal{
+    --bs-modal-margin: 2rem;
+  }
 
 
   /* Remove transform animation, but keep fade-in animation */
@@ -39,8 +43,8 @@
   ,  linear-gradient(
         to top right,
         /* #212168c6, */
-        #f7f6f2,
-        #f3ead1
+        #e7e7e7,
+        #ffffff
       );
 }
 

@@ -129,8 +129,8 @@
     background: linear-gradient(
         to top right,
         /* #212168c6, */
-        #175876,
-        #ffc95e23
+        #0c0c0c,
+        #39373523
       ),
       radial-gradient(
         at var(--mouse-x, 0%) var(--mouse-y, 0%),
@@ -145,8 +145,8 @@
     filter: contrast(130%) brightness(100%);
     background: linear-gradient(
         to top left,
-        rgba(21, 180, 229, 0.674),
-        #d4b26eab
+        rgba(255, 252, 252, 0.674),
+        #616161ab
       ),
       radial-gradient(
         at var(--mouse-x, 0%) var(--mouse-y, 0%),
