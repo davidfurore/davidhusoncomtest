@@ -102,7 +102,7 @@ export default function OmarmFilm() {
 
       <div role="button" onClick={handleShow}>
         <img
-          className="rounded float-start img-thumbnail grow"
+          className="img-fluid rounded float-start img-thumbnail grow"
           src={omarmcover}
           alt="..."
         />

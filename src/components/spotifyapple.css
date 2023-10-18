@@ -1,8 +1,11 @@
 .zoom-in{
-    transition: all 0.5s;
+    transition: all 0.7s;
+    filter: hue-rotate(180deg);
 }
 
 .zoom-in:hover{
-    transition: all .5s;
+    transition: all .7s;
+    filter: hue-rotate(0);
     transform: scale(1.04)}
+   
     ;

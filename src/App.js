@@ -13,6 +13,7 @@ import About from "./components/About";
 import comoelvientocover from "./img/comoelviento.jpg";
 import Modal from "react-bootstrap/Modal";
 import SpotifyApple from "./components/SpotifyApple";
+import fan2 from "./img/fan2.png";
 import Button from "react-bootstrap/Button";
 import {
   Link,
@@ -35,6 +36,7 @@ import "./fonts/fonts.css";
 export default function App() {
   /////////////////////////////////////////////////////////////
   // grained.js code
+
   (function (window, doc) {
     "use strict";
 
@@ -215,25 +217,25 @@ export default function App() {
   const portfolioRef = useRef(null);
   const aboutRef = useRef(null);
 
-  useEffect(() => {
-    const moveGradient = (event) => {
-      const winWidth = window.innerWidth;
-      const winHeight = window.innerHeight;
-      const mouseX = Math.round((event.pageX / winWidth) * 100);
-      const mouseY = Math.round((event.pageY / winHeight) * 100);
+  // useEffect(() => {
+  //   const moveGradient = (event) => {
+  //     const winWidth = window.innerWidth;
+  //     const winHeight = window.innerHeight;
+  //     const mouseX = Math.round((event.pageX / winWidth) * 100);
+  //     const mouseY = Math.round((event.pageY / winHeight) * 100);
 
-      if (homeRef) {
-        homeRef.current.style.setProperty("--mouse-x", mouseX.toString() + "%");
-        homeRef.current.style.setProperty("--mouse-y", mouseY.toString() + "%");
-      }
-    };
+  //     if (homeRef) {
+  //       homeRef.current.style.setProperty("--mouse-x", mouseX.toString() + "%");
+  //       homeRef.current.style.setProperty("--mouse-y", mouseY.toString() + "%");
+  //     }
+  //   };
 
-    document.addEventListener("mousemove", moveGradient);
+  //   document.addEventListener("mousemove", moveGradient);
 
-    return function cleanup() {
-      document.removeEventListener("mousemove", moveGradient);
-    };
-  }, [homeRef, portfolioRef, aboutRef]);
+  //   return function cleanup() {
+  //     document.removeEventListener("mousemove", moveGradient);
+  //   };
+  // }, [homeRef, portfolioRef, aboutRef]);
 
   return (
     <>
@@ -244,14 +246,21 @@ export default function App() {
              "
         >
           <main ref={homeRef}>
-            <div className="content snapstart animate__animated animate__fadeIn homebackground">
-              <h4 className="content-header p-4" id="home">
-                David Huson
+            <div className="snapstart animate__animated animate__fadeIn homebackground">
+              <h4 className="content-header sticky-top p-4" id="home">
+                <div className="d-flex justify-content-between align-items-center mx-3">
+                  <div className="animate__animated animate__slideInDown">
+                    <img className="headerimg" src={fan2} />
+                  </div>
+                  <div className="animate__animated animate__slideInDown">
+                    David Huson
+                  </div>
+                </div>
               </h4>
               <div className="container">
-                <div className="container content d-flex align-items-center justify-content-center">
+                <div className="container d-flex align-items-center justify-content-center">
                   <div class="row mx-auto text-center">
-                    <div class="col-12 col-md-6 ">
+                    <div class="col-12 col-md-6 mb-5">
                       <AlbumCover />
                     </div>
                     <div class="col-12 col-md-6 animate__animated animate__fadeIn">
@@ -268,22 +277,19 @@ export default function App() {
                 </div>
               </div>
             </div>
-            <div
-              className="content snapstart portfoliobackground"
-              ref={portfolioRef}
-            >
-              <h4 className="content-header p-4 text-white" id="portfolio">
+            <div className="  snapstart portfoliobackground" ref={portfolioRef}>
+              <h4 className="content-header p-4 sticky-top" id="portfolio">
                 Portfolio
               </h4>
               <div className="container">
                 <ProjectsGallery />
               </div>
             </div>
-            <div className=" content snapstart aboutbackground" ref={aboutRef}>
+            <div className="   snapstart aboutbackground" ref={aboutRef}>
               <h4 className="content-header p-4" id="about">
                 About
               </h4>
-              <div className="container content d-flex align-items-center justify-content-center">
+              <div className="container  d-flex align-items-center justify-content-center">
                 <About />
               </div>
             </div>

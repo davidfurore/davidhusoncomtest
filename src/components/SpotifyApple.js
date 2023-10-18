@@ -6,7 +6,7 @@ import "./spotifyapple.css";
 export default function SpotifyApple() {
   return (
     <>
-      <div className="row my-5 px-5">
+      <div className="row m-3 mt-5">
         <div className="col">
           <a
             href="https://music.apple.com/nl/album/let-me-bend-it-for-you-ep/1705138058"

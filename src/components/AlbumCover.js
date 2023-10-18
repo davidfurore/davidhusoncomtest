@@ -77,7 +77,7 @@ const AlbumCover = () => {
         }}
         onClick={() => setFlipped((state) => !state)}
       >
-        <div className="position-relative mb-5">
+        <div className="position-relative">
           <img
             src={imageState ? albumfront : albumback}
             className="albumimage grow2 rounded"

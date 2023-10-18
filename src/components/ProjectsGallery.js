@@ -10,14 +10,25 @@ export default function ProjectsGallery() {
       {/* //modals */}
 
       <div className="container">
-        <div className="row m-5">
-          <div className="col-sm">
+        <div className="row ">
+          <div className="col">
             <SoleaFilm />
           </div>
-          <div className="col-sm">
+          <div className="col">
             <ComoElViento />
           </div>
-          <div className="col-sm">
+          <div className="col">
+            <OmarmFilm />
+          </div>
+        </div>
+        <div className="row ">
+          <div className="col">
+            <SoleaFilm />
+          </div>
+          <div className="col">
+            <ComoElViento />
+          </div>
+          <div className="col">
             <OmarmFilm />
           </div>
         </div>

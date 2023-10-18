@@ -1,7 +1,9 @@
 @font-face {
     font-family: HeaderFont;
-    src: url("./rastaglion.ttf");
+    src: url("./Heebo-ExtraLight.ttf");
   }
+
+  /* previous: rastaglion.ttf */
 
   @font-face {
     font-family: UnnaFont;
@@ -11,11 +13,12 @@
 
   @font-face {
     font-family: GildaFont;
-    src: url("./GildaDisplay-Regular.ttf");
+    src:  url("./Heebo-ExtraLight.ttf");
   }
 
   .content-header{
     font-family: HeaderFont;
+    
   }
 
   .display-6 {
