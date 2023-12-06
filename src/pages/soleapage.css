@@ -1,0 +1,64 @@
+  
+  .soleabackground{
+    filter: contrast(110%) brightness(100%);
+    background: linear-gradient(
+        to top,
+        /* #FFF8EA, */
+        #f3f2f1,
+        #e8e7e449
+      ),
+   
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 50 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    min-height: 100vh;
+    width: 100%;
+    }
+
+
+/* Create four equal columns that sits next to each other */
+.gallery{
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;
+  
+  }
+  .gallery-item{
+    flex-basis: 50%;
+    padding: 0.1em;
+  }
+  .gallery img {
+ 
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 0;
+      
+  }
+
+  @media only screen and (max-width: 800px) {
+    .gallery {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+
+  .animate__fadeInLeft{
+    animation-duration: 0.7s;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  /* @media screen and (max-width: 800px) {
+    .gallery-column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
+   */
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  /* @media screen and (max-width: 600px) {
+    .gallery-column {
+      flex: 100%;
+      max-width: 100%;
+    }
+  } */
+  

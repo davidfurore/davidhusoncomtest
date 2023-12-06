@@ -1,20 +1,23 @@
 .modal {
     --bs-modal-width: 100%;
-    background-color: #10101059;
+
     
   }
 
-
-.modal-content{
-    height: 90vh;
-    width: 90vw;
-    background-color: #fafaf2;
- 
+  .modal-body{
+    background: url("data:image/svg+xml,%3Csvg viewBox='0 0 150 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='8' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")
+  ,  linear-gradient(
+        to top right,
+        /* #212168c6, */
+        #ffffff,
+        #f0efef
+      );
   }
-
   
   .modal{
-    --bs-modal-margin: 2rem;
+    --bs-modal-margin: 0rem;
+    border-radius: 0;
+    
   }
 
 
@@ -31,7 +34,8 @@
 
 /* Remove border from modal content */
 .modal-content {
-  
+  padding:0;
+  margin:0;
   border: none;
 }
 
@@ -43,9 +47,13 @@
   ,  linear-gradient(
         to top right,
         /* #212168c6, */
-        #e7e7e7,
-        #ffffff
+        #ffffff,
+        #f0efef
       );
+      height: 100%;
+      width: 100vw;
+      
+      border-radius: 0;
 }
 
 /* .modal-content {

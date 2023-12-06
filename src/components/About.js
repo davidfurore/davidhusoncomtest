@@ -5,9 +5,9 @@ import guitarprofile from "../img/profiledavid2.jpg";
 export default function About() {
   return (
     <>
-      <div className="row mx-5 text-center">
+      <div className="row mx-5 text-center pt-5">
         <div className="col-12 col-md-6 typewriter">
-          <p className="display-6">What is this about?</p>
+          {/* <p className="display-6">What is this about?</p> */}
           <p>
             Hola! I'm a guitarist, composer and producer. I create music, film
             and art projects in which I combine my background in flamenco guitar

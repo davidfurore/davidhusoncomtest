@@ -65,7 +65,7 @@ const AlbumCover = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <animated.div
         style={{
           ...fade,
@@ -77,7 +77,7 @@ const AlbumCover = () => {
         }}
         onClick={() => setFlipped((state) => !state)}
       >
-        <div className="position-relative">
+        <div className="container">
           <img
             src={imageState ? albumfront : albumback}
             className="albumimage grow2 rounded"
@@ -85,7 +85,7 @@ const AlbumCover = () => {
           />
         </div>
       </animated.div>
-    </div>
+    </>
   );
 
   // <div className="container vibe">

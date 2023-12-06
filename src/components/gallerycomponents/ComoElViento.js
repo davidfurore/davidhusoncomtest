@@ -153,13 +153,9 @@ export default function ComoElViento() {
         </Modal.Body>
       </Modal>
 
-      <div role="button" onClick={handleShow}>
-        <img
-          className="img-fluid rounded float-start img-thumbnail grow"
-          src={comoelvientocover}
-          alt="..."
-        />
-      </div>
+      {/* <div className="container" role="button" onClick={handleShow}> */}
+      <img className="grow3" src={comoelvientocover} alt="..." />
+      {/* </div> */}
     </>
   );
 }

@@ -1,23 +1,29 @@
 @font-face {
-    font-family: HeaderFont;
-    src: url("./Heebo-ExtraLight.ttf");
+    font-family: RastaglionFont;
+    src: url("./rastaglion.ttf");
   }
 
   /* previous: rastaglion.ttf */
 
-  @font-face {
+@font-face {
     font-family: UnnaFont;
     src: url("./Unna-Regular.ttf");
   }
 
 
-  @font-face {
+@font-face {
     font-family: GildaFont;
-    src:  url("./Heebo-ExtraLight.ttf");
+    src:  url("./GildaDisplay-Regular.ttf");
   }
 
+  
+@font-face {
+  font-family: HeeboFont;
+  src:  url("./Heebo-ExtraLight.ttf");
+}
+
   .content-header{
-    font-family: HeaderFont;
+    font-family: RastaglionFont;
     
   }
 

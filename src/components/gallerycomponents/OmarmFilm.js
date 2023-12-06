@@ -100,13 +100,9 @@ export default function OmarmFilm() {
         </Modal.Body>
       </Modal>
 
-      <div role="button" onClick={handleShow}>
-        <img
-          className="img-fluid rounded float-start img-thumbnail grow"
-          src={omarmcover}
-          alt="..."
-        />
-      </div>
+      {/* <div className="container" role="button" onClick={handleShow}> */}
+      <img className="grow3" src={omarmcover} alt="..." />
+      {/* </div> */}
     </>
   );
 }
