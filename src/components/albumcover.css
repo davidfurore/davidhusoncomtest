@@ -2,7 +2,7 @@
 
 
 .grow2{
-    filter: hue-rotate(180deg);
+    filter: hue-rotate(-30deg);
     transition: 1s ease;
     }
 

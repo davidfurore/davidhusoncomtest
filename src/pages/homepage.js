@@ -5,9 +5,9 @@ import BackgroundAnimation from "../components/BackgroundAnimation";
 import AlbumCover from "../components/AlbumCover";
 import ProjectsGallery from "../components/ProjectsGallery";
 import About from "../components/About";
-
+import SoleaHeader from "../components/SoleaHeader";
 import SpotifyApple from "../components/SpotifyApple";
-import fan2 from "../img/fan2.png";
+import fan2 from "../img/fan2white.png";
 
 import {
   Link,
@@ -269,6 +269,26 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
+            <div className="snapstart portfoliobackground" ref={portfolioRef}>
+              <div className="position-absolute sticky-top mt-5 mx-5 p-4">
+                <h1 className="content-header display-1" id="portfolio">
+                  Solea
+                </h1>
+                <div className="pt-5 ">
+                  <p>
+                    a short flamenco fusion dance film
+                    <br></br> 2023
+                    <br></br>
+                    <br></br>
+                    more info
+                  </p>
+                </div>
+              </div>
+
+              <SoleaHeader />
+            </div>
+
             <div className="snapstart portfoliobackground" ref={portfolioRef}>
               <h4 className="content-header sticky-top p-4 " id="portfolio">
                 Portfolio
