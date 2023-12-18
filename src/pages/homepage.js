@@ -6,6 +6,7 @@ import AlbumCover from "../components/AlbumCover";
 import ProjectsGallery from "../components/ProjectsGallery";
 import About from "../components/About";
 import SoleaHeader from "../components/SoleaHeader";
+import ComoElVientoHeader from "../components/ComoElVientoHeader";
 import SpotifyApple from "../components/SpotifyApple";
 import fan2 from "../img/fan2white.png";
 
@@ -209,6 +210,7 @@ export default function HomePage() {
   ///////////////////////////////////////////////////////////
   const homeRef = useRef(null);
   const portfolioRef = useRef(null);
+  const comoElVientoRef = useRef(null);
   const aboutRef = useRef(null);
 
   // useEffect(() => {
@@ -253,7 +255,7 @@ export default function HomePage() {
               </h4>
 
               <div className="container d-flex align-items-center justify-content-center">
-                <div class="row mx-auto text-center mt-5">
+                <div class="row mx-auto text-center mt-5 mb-3">
                   <div class="col-12 col-md-6 mb-5">
                     <AlbumCover />
                   </div>
@@ -266,29 +268,82 @@ export default function HomePage() {
                       <SpotifyApple />
                     </div>
                   </div>
+                  <h4>
+                    <p>
+                      <a className="link-opacity-50" href="">
+                        <i class="bi bi-chevron-down"></i>
+                      </a>
+                    </p>
+                  </h4>
                 </div>
               </div>
             </div>
 
             <div className="snapstart portfoliobackground" ref={portfolioRef}>
-              <div className="position-absolute sticky-top mt-5 mx-5 p-4">
-                <h1 className="content-header display-1" id="portfolio">
-                  Solea
-                </h1>
-                <div className="pt-5 ">
-                  <p>
-                    a short flamenco fusion dance film
-                    <br></br> 2023
-                    <br></br>
-                    <br></br>
-                    more info
-                  </p>
+              <a href="/solea">
+                <div className="position-absolute sticky-top mt-5 mx-5 p-4">
+                  <h1 className="content-header display-1" id="portfolio">
+                    Soleá
+                  </h1>
+                  <div className="pt-5 ">
+                    <p>
+                      a short flamenco fusion dance film
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <i>more</i>
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </a>
 
               <SoleaHeader />
+              <div class="position-absolute start-50 bottom-0 pb-3 ">
+                <h4>
+                  <p>
+                    <a className="link-opacity-50" href="">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                  </p>
+                </h4>
+              </div>
             </div>
 
+            {/* como el viento */}
+            <div
+              className="snapstart portfoliobackground"
+              ref={comoElVientoRef}
+            >
+              <a href="/comoelviento">
+                <div className="position-absolute sticky-top mt-5 mx-5 p-4">
+                  <h1 className="content-header display-1" id="portfolio">
+                    Como El Viento
+                  </h1>
+                  <div className="pt-5 ">
+                    <p>
+                      a flamenco jazz drill project
+                      <br></br>
+                      <br></br>
+                      <br></br>
+                      <i>more</i>
+                    </p>
+                  </div>
+                </div>
+              </a>
+
+              <ComoElVientoHeader />
+              <div class="position-absolute start-50 bottom-0 pb-3 ">
+                <h4>
+                  <p>
+                    <a className="link-opacity-50" href="">
+                      <i class="bi bi-chevron-down"></i>
+                    </a>
+                  </p>
+                </h4>
+              </div>
+            </div>
+
+            {/* portfolio */}
             <div className="snapstart portfoliobackground" ref={portfolioRef}>
               <h4 className="content-header sticky-top p-4 " id="portfolio">
                 Portfolio
