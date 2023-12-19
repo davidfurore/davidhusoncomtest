@@ -3,19 +3,10 @@ import { useEffect } from "react";
 import still1 from "../img/soleagallery/solea1.jpg";
 import still1_low from "../img/soleagallery/solea1_low.jpg";
 import still2 from "../img/soleagallery/solea2.jpg";
-import still3 from "../img/soleagallery/solea3.jpg";
 import still4 from "../img/soleagallery/solea4.jpg";
-import still5 from "../img/soleagallery/solea5.jpg";
 import still6 from "../img/soleagallery/solea6.jpg";
-import "./soleapage.css";
 import AOS from "aos";
-import "aos/dist/aos.css";
-import { trackWindowScroll } from "react-lazy-load-image-component";
-
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
-
-const photo1 = { src: { still1 } };
 
 export default function SoleaPage() {
   useEffect(() => {
@@ -43,7 +34,7 @@ export default function SoleaPage() {
                     effect="blur"
                     placeholderSrc={still1_low}
                     key={2}
-                    // scrollPosition={scrollPosition}
+                    scrollPosition={scrollPosition}
                     src={still6}
                   />
                 </div>
@@ -63,7 +54,7 @@ export default function SoleaPage() {
                     effect="blur"
                     placeholderSrc={still1_low}
                     key={still1}
-                    // scrollPosition={scrollPosition}
+                    scrollPosition={scrollPosition}
                     src={still1}
                   />
                 </div>
@@ -73,14 +64,14 @@ export default function SoleaPage() {
                 <div className="gallery-item subheader-item">
                   <div className="text-start p-5 gildafont">
                     {/* <p>
-                      Soleá (2023) is a short dance film about a young woman
-                      looking for love within the superficial hookup culture of
-                      Amsterdam. One day she is captivated by an old flamenco
-                      rhythm, the “Soleá”, that loosely translates to
-                      “loneliness”. This rhythm sparks a series of events that
-                      take her and a mysterious stranger on a journey through
-                      flamenco, the city of Amsterdam, and her emotions.
-                    </p> */}
+              Soleá (2023) is a short dance film about a young woman
+              looking for love within the superficial hookup culture of
+              Amsterdam. One day she is captivated by an old flamenco
+              rhythm, the “Soleá”, that loosely translates to
+              “loneliness”. This rhythm sparks a series of events that
+              take her and a mysterious stranger on a journey through
+              flamenco, the city of Amsterdam, and her emotions.
+            </p> */}
                     <p>
                       Soleá (2023) is a short dance film about a young woman
                       looking for love in Amsterdam. One day she is captivated
