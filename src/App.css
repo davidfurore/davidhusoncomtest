@@ -25,6 +25,11 @@
     rgba(0, 0, 0, 0.5)
   );
 } */
+
+.bi-chevron-down{
+  color:whitesmoke
+}
+
 a i {
   color: whitesmoke
 }

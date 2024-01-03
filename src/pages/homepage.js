@@ -270,7 +270,7 @@ export default function HomePage() {
                   </div>
                   <h4>
                     <p>
-                      <a className="link-opacity-50" href="">
+                      <a className="link-opacity-50" href="#portfolio1">
                         <i class="bi bi-chevron-down"></i>
                       </a>
                     </p>
@@ -282,7 +282,7 @@ export default function HomePage() {
             <div className="snapstart portfoliobackground" ref={portfolioRef}>
               <a href="/solea">
                 <div className="position-absolute sticky-top mt-5 mx-5 p-4">
-                  <h1 className="content-header display-1" id="portfolio">
+                  <h1 className="content-header display-1" id="portfolio1">
                     Soleá
                   </h1>
                   <div className="pt-5 ">
@@ -301,7 +301,7 @@ export default function HomePage() {
               <div class="position-absolute start-50 bottom-0 pb-3 ">
                 <h4>
                   <p>
-                    <a className="link-opacity-50" href="">
+                    <a className="link-opacity-50" href="#portfolio2">
                       <i class="bi bi-chevron-down"></i>
                     </a>
                   </p>
@@ -316,7 +316,7 @@ export default function HomePage() {
             >
               <a href="/comoelviento">
                 <div className="position-absolute sticky-top mt-5 mx-5 p-4">
-                  <h1 className="content-header display-1" id="portfolio">
+                  <h1 className="content-header display-1" id="portfolio2">
                     Como El Viento
                   </h1>
                   <div className="pt-5 ">
@@ -335,7 +335,7 @@ export default function HomePage() {
               <div class="position-absolute start-50 bottom-0 pb-3 ">
                 <h4>
                   <p>
-                    <a className="link-opacity-50" href="">
+                    <a className="link-opacity-50" href="#portfolio3">
                       <i class="bi bi-chevron-down"></i>
                     </a>
                   </p>
@@ -345,7 +345,7 @@ export default function HomePage() {
 
             {/* portfolio */}
             <div className="snapstart portfoliobackground" ref={portfolioRef}>
-              <h4 className="content-header sticky-top p-4 " id="portfolio">
+              <h4 className="content-header sticky-top p-4 " id="portfolio3">
                 Portfolio
               </h4>
 

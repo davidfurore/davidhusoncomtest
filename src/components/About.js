@@ -5,15 +5,15 @@ import guitarprofile from "../img/profiledavid2.jpg";
 export default function About() {
   return (
     <>
-      <div className="row mx-5 text-center pt-5">
-        <div className="col-12 col-md-6 typewriter">
+      <div className="row mx-5 text-start pt-5">
+        <div className="col-12 col-md-6 abouttext">
           {/* <p className="display-6">What is this about?</p> */}
           <p>
-            Hola! I'm a guitarist, composer and producer. I create music, film
-            and art projects in which I combine my background in flamenco guitar
-            with a wide variety of other genres, including Hip-Hop, Electronic
-            and Latin-American music. In addition, I compose and produce music
-            for short films and documentaries.
+            I'm a guitarist, composer and producer. I create music, film and art
+            projects in which I combine my background in flamenco guitar with a
+            wide variety of other genres, including Hip-Hop, Electronic and
+            Latin-American music. In addition, I compose and produce music for
+            short films and documentaries.
           </p>
           <div className="h4 my-3">
             <ul class="list-inline ">
