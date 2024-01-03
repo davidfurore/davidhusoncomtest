@@ -21,7 +21,7 @@ export default function SoleaPage() {
   return (
     <div className="" id="grained">
       <div className="parentcontainer soleabackground " ref={containerRef}>
-        <div className="animate__animated animate__fadeInLeft sticky-top">
+        <div className="backbutton" style={{ top: scrollPosition }}>
           <button type="button" class="btn btn-link">
             <a className="link-dark" href="/">
               <i class="bi bi-chevron-left"></i>

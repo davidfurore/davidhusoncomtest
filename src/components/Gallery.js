@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  LazyLoadImage,
-  LazyLoadComponent,
-} from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 import AOS from "aos";
@@ -18,6 +15,7 @@ import still4_low from "../img/soleagallery/solea4_low.jpg";
 
 import still6 from "../img/soleagallery/solea8.jpg";
 import still6_low from "../img/soleagallery/solea6_low.jpg";
+
 function Gallery({ scrollPosition }) {
   useEffect(() => {
     AOS.init();
@@ -32,12 +30,13 @@ function Gallery({ scrollPosition }) {
     <>
       <div className="gallery">
         <div
-          data-aos="fade"
-          data-aos-duration="2000"
+          data-aos="fade-up"
+          data-aos-duration="4000"
           className="gallery-item long"
         >
           <LazyLoadImage
             alt={still6}
+            delayTime={5000}
             effect="blur"
             placeholderSrc={still6_low}
             key={still6}
@@ -79,7 +78,11 @@ function Gallery({ scrollPosition }) {
             src={still1}
           />
         </div>
-        <div className="gallery-item long">
+        <div
+          data-aos="fade"
+          data-aos-duration="2000"
+          className="gallery-item long"
+        >
           <LazyLoadImage
             alt={still4}
             effect="blur"
